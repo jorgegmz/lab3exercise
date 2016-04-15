@@ -8,6 +8,8 @@ import android.support.v7.widget.Toolbar;
 import android.view.View;
 import android.view.Menu;
 import android.view.MenuItem;
+import android.widget.EditText;
+import android.widget.TextView;
 
 public class MainActivity extends AppCompatActivity {
 
@@ -28,6 +30,23 @@ public class MainActivity extends AppCompatActivity {
         });
     }
 
+    public void onAddClick(View a){
+        if(a.getId() == R.id.button){
+            EditText a1 = (EditText)findViewById(R.id.TFnumber1);
+            EditText a2 = (EditText)findViewById(R.id.TFnumber2);
+
+            double num1, num2, result;
+
+            num1 = Double.parseDouble(a1.getText().toString());
+            num2 = Double.parseDouble(a2.getText().toString());
+
+            result = num1 + num2;
+
+            TextView t = (TextView)findViewById(R.id.TVresult);
+            t.setText("" + result);
+
+        }
+    }
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
         // Inflate the menu; this adds items to the action bar if it is present.

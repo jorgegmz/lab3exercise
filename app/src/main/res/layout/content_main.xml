@@ -13,7 +13,41 @@
     tools:showIn="@layout/activity_main">
 
     <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:text="@string/emptystring"
+        android:id="@+id/TVresult"
+        android:layout_above="@+id/button"
+        android:layout_marginBottom="24dp"
+        android:layout_alignLeft="@+id/button"
+        android:layout_alignStart="@+id/button"
+        android:layout_alignRight="@+id/button"
+        android:layout_alignEnd="@+id/button" />
+
+    <Button
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Hello World!" />
+        android:text="Add"
+        android:id="@+id/button"
+        android:layout_centerVertical="true"
+        android:layout_centerHorizontal="true"
+        android:onClick="onAddClick" />
+
+    <EditText
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/TFnumber1"
+        android:layout_marginBottom="23dp"
+        android:layout_above="@+id/TFnumber2"
+        android:layout_centerHorizontal="true" />
+
+    <EditText
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/TFnumber2"
+        android:layout_above="@+id/TVresult"
+        android:layout_alignLeft="@+id/TFnumber1"
+        android:layout_alignStart="@+id/TFnumber1"
+        android:layout_marginBottom="34dp" />
 </RelativeLayout>
