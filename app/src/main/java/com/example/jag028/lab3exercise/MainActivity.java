@@ -35,10 +35,10 @@ public class MainActivity extends AppCompatActivity {
             EditText a1 = (EditText)findViewById(R.id.TFnumber1);
             EditText a2 = (EditText)findViewById(R.id.TFnumber2);
 
-            double num1, num2, result;
+            int num1, num2, result;
 
-            num1 = Double.parseDouble(a1.getText().toString());
-            num2 = Double.parseDouble(a2.getText().toString());
+            num1 = Integer.parseInt(a1.getText().toString());
+            num2 = Integer.parseInt(a2.getText().toString());
 
             result = num1 + num2;
 
