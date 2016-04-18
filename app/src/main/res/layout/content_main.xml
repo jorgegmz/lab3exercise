@@ -12,42 +12,46 @@
     tools:context="com.example.jag028.lab3exercise.MainActivity"
     tools:showIn="@layout/activity_main">
 
+    <EditText
+        android:layout_width="200dp"
+        android:layout_height="80dp"
+        android:layout_marginTop="50dp"
+        android:id="@+id/TFnumber1"
+        android:inputType="number"
+        android:textSize="25dp"
+        android:layout_centerHorizontal="true" />
+
+    <EditText
+        android:layout_width="200dp"
+        android:inputType="number"
+        android:layout_height="80dp"
+        android:id="@+id/TFnumber2"
+        android:layout_centerHorizontal="true"
+        android:layout_below="@id/TFnumber1"
+        android:textSize="25dp"/>
+
     <TextView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:textAppearance="?android:attr/textAppearanceLarge"
         android:text="@string/emptystring"
         android:id="@+id/TVresult"
-        android:layout_above="@+id/button"
+        android:layout_below="@id/TFnumber2"
         android:layout_marginBottom="24dp"
-        android:layout_alignLeft="@+id/button"
-        android:layout_alignStart="@+id/button"
-        android:layout_alignRight="@+id/button"
-        android:layout_alignEnd="@+id/button" />
+        android:gravity="center_horizontal"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginTop="50dp" />
 
     <Button
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="Add"
+        android:layout_below="@id/TVresult"
+
         android:id="@+id/button"
-        android:layout_centerVertical="true"
+        android:layout_marginTop="50dp"
         android:layout_centerHorizontal="true"
         android:onClick="onAddClick" />
 
-    <EditText
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:id="@+id/TFnumber1"
-        android:layout_marginBottom="23dp"
-        android:layout_above="@+id/TFnumber2"
-        android:layout_centerHorizontal="true" />
 
-    <EditText
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:id="@+id/TFnumber2"
-        android:layout_above="@+id/TVresult"
-        android:layout_alignLeft="@+id/TFnumber1"
-        android:layout_alignStart="@+id/TFnumber1"
-        android:layout_marginBottom="34dp" />
 </RelativeLayout>
